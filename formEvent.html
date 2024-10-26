@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- FORM EVENT -->
+    <!-- <input type="text" onfocus="inpFocus()"  name="" id=""> -->
+    <!-- <input type="text" onblur="inpBlur()" name="" id=""> -->
+    <!-- <input type="text" oninput="onInput()" name="" id=""> -->
+    <!-- <input type="text" onchange="inpChange()" name="" id=""> -->
+    <!-- <input type="text"  name="" id="" onkeypress="keyPress()"> -->
+    <!-- <input type="text"  name="" id="" onkeyup="keyUp()"> -->
+
+    <form action="" onsubmit="formSubmit(event)" >
+        <label for="">User</label><br>
+        <input type="text" name="" id=""><br>
+        <label for="">Email</label><br>
+        <input type="email" name="" id=""><br>
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+    <script>
+        // const inpFocus = () => {
+        //     // alert("Focus")
+        //     console.log('focus');
+        // }
+        // const inpBlur = () => {
+        //     // alert("Focus")
+        //     console.log('blur');
+        // }
+        // const onInput = () => {
+        //     // alert("Focus")
+        //     console.log('Input')
+        // };
+        // const keyPress = () => {
+        //     // alert("Focus")
+        //     console.log('key press');
+        // };
+        // const keyUp  = () => {
+        //     // alert("Focus")
+        //     console.log('key up');
+        // };
+
+        //Form Submit
+        const formSubmit = (e) => {
+            e.preventDefault();
+        };
+    </script>
+</body>
+</html>

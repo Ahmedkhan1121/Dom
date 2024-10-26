@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="para" class=""> Lorem ipsum dolor sit amet consectetur <span>adipisicing</span> elit. Totam tenetur dignissimos accusantium labore beatae architecto, facere sequi dolores. Sapiente dicta atque sint, ipsum porro architecto earum sed ad tempore distinctio voluptate. Id quibusdam, necessitatibus et atque eius nisi, excepturi minus, ut pariatur obcaecati dicta deleniti!</p> -->
+
+    <!-- DOM Transversal -->
+    <div id="parent">
+        <h1>lorem</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae voluptatibus autem doloremque quidem, maxime facere repudiandae, amet id animi ab molestias debitis ad libero tempore. Dignissimos temporibus nobis provident, nisi tenetur et iure necessitatibus aliquid unde cum eos laboriosam, quidem voluptatum natus non, perferendis explicabo!</p>
+        <button>Submit</button>
+    </div>
+
+    <script>
+        // let paraId = document.getElementById("para"); 
+        // console.log(paraId);
+        // console.log(paraId.innerText);
+        // paraId.innerText = "gieruighe";
+        // console.log(paraId.innerHTML);
+        // paraId.innerHTML = '<h1>Lorem Ipsum</h1>';
+        // console.log(paraId.innerHTML);
+        // =>Get Attribute
+        // let getAttribu =paraId.getAttribute("class");
+        // console.log(getAttribu);
+        // let getAtributeNode = paraId.getAttributeNode("class");
+        // console.log(getAtributeNode);
+
+        //=>Set Attributes
+        // let setAtt = paraId.setAttribute("class","ahmed");
+        // let setAtt2 = paraId.setAttribute("class","ashar sammer");
+        // let setAtt3 = paraId.setAttribute("title","lorem")
+
+        //=>Remove Attribute
+        // let removAttribut = paraId.removeAttribute("class");
+
+        //=>Style
+        // paraId.style.textTransform = "uppercase";
+        // paraId.style.color = "red";
+        // paraId.style.fontStyle = "italic";
+
+        //=>classlist
+    //     let classlist = paraId.classList;
+    //  paraId.classList.add("ahmed");
+    //  paraId.classList.add("ashar");
+    //  console.log(classlist.length);
+    //  console.log(classlist.contains("Ashar"));
+    //  paraId.classList.remove("ashar")
+    //  paraId.classList.replace("ahmed","anas");
+    //  console.log(classlist);
+    //     console.log(paraId.classList.item(1));;
+
+
+    //=>DOM Transversal
+        let parentElem = document.getElementById("parent");
+        console.log(parentElem);
+        console.log(parentElem.firstElementChild);
+        console.log(parentElem.lastElementChild);
+        // console.log(parentElem.children[1]);
+        let midChild = parentElem.children[1];
+        let prevSibling = midChild.previousElementSibling;
+        console.log(prevSibling);
+        let nextSibling = midChild.nextElementSibling;
+        console.log(nextSibling);
+        let newElem = document.createElement("span");
+         newElem.textContent = "loren Ipsum"; 
+        //  parentElem.appendChild(newElem);
+        parentElem.insertBefore(newElem,midChild);
+        console.log(newElem);
+        let newElem2 = document.createElement("li");
+        newElem2.textContent = "Apple";
+        newElem2.setAttribute("id","list");
+        console.log(newElem2);
+        parentElem.replaceChild(newElem2,newElem);
+        console.log(newElem2.hasAttribute("id"));
+        parentElem.removeChild(nextSibling);
+        // console.log(pare);
+    </script>
+</body>
+</html>
